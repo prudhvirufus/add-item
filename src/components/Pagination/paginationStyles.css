@@ -1,0 +1,19 @@
+.pagination-control, .pagination-container, .page-number{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pagination-container{
+    justify-content: flex-end;
+}
+
+.pagination-control{
+    cursor: pointer;
+}
+
+.page-number{
+    width:25px;
+    margin-right:5px;
+    margin-left:5px;
+}
