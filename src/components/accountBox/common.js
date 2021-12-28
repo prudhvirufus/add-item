@@ -29,7 +29,7 @@ export const MutedLink = styled.a`
 
 export const BoldLink = styled.a`
   font-size: 11px;
-  color: rgb(241, 196, 15);
+  color: rgb(48, 217, 217));
   font-weight: 500;
   text-decoration: none;
   margin: 0 4px;
@@ -66,11 +66,11 @@ export const SubmitButton = styled.button`
   border-radius: 100px 100px 100px 100px;
   cursor: pointer;
   transition: all, 240ms ease-in-out;
-  background: rgb(241, 196, 15);
+  background: rgb(48, 217, 217);
   background: linear-gradient(
     58deg,
-    rgba(241, 196, 15, 1) 20%,
-    rgba(243, 172, 18, 1) 100%
+    rgba(48, 217, 217, 1) 20%,
+    rgba(48, 217, 217, 1) 100%
   );
   &:hover {
     filter: brightness(1.03);

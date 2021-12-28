@@ -7,8 +7,7 @@ import {
   DashBoardContainer,
   Header,
   SearchContainer,
-  EachCard,
-  ListContainer,
+  Footer,
 } from "./styledComponents";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -150,12 +149,14 @@ const AddItemDashBoard = () => {
         currentPage={currentPage}
         onDelete={onDelete}
       />
-      <Pagination
-        lastPage={lastPage}
-        currentPage={currentPage}
-        goToNextPage={goToNextPage}
-        goToPreviousPage={goToPreviousPage}
-      />
+      <Footer>
+        <Pagination
+          lastPage={lastPage}
+          currentPage={currentPage}
+          goToNextPage={goToNextPage}
+          goToPreviousPage={goToPreviousPage}
+        />
+      </Footer>
     </DashBoardContainer>
   );
 };
