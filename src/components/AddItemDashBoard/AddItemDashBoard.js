@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import Pagination from "../Pagination/index";
 import { initialList } from "../../fixturesData";
-import { FaBeer } from "react-icons/fa";
-import { BsFillTrashFill, BsSearch } from "react-icons/bs";
+
+import {  BsSearch } from "react-icons/bs";
 import {
   DashBoardContainer,
   Header,
@@ -15,13 +15,12 @@ import { AddItem } from "./AddItem";
 import { List } from "./List";
 
 const AddItemDashBoard = () => {
-  console.log("dahshboard");
-  const [listData, setListData] = React.useState(initialList);
+  const [listData, setListData] = useState(initialList);
   const [listDefaultData, setDefaultListData] = useState(initialList);
-  const [name, setName] = React.useState("");
-  const [price, setPrice] = React.useState("");
-  const [sortStatus, setSortStatus] = React.useState(true);
-  const [sortNameStatus, setSortNameStatus] = React.useState(true);
+  const [name, setName] = useState("");
+  const [price, setPrice] = useState("");
+  const [sortStatus, setSortStatus] = useState(true);
+  const [sortNameStatus, setSortNameStatus] = useState(true);
   const [error, setError] = useState(null);
   const [currentPage, setCurrentPage] = useState(1);
   const limitPerPage = 7;
@@ -34,7 +33,7 @@ const AddItemDashBoard = () => {
   };
 
   function handleChange(event) {
-    if (event.target.type == "text") {
+    if (event.target.type === "text") {
       setName(event.target.value);
     } else {
       setPrice(event.target.value);
@@ -42,7 +41,7 @@ const AddItemDashBoard = () => {
   }
 
   function handleAdd() {
-    if (name != "" && price !== "") {
+    if (name !== "" && price !== "") {
       toast.success("Item Added", {
         position: "top-right",
         autoClose: 3000,
@@ -74,7 +73,7 @@ const AddItemDashBoard = () => {
   };
 
   const onDelete = (id) => {
-    const newList = listData.filter((each) => each.id != id);
+    const newList = listData.filter((each) => each.id !== id);
     setListData(newList);
     setDefaultListData(newList);
   };

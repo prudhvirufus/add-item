@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { motion } from "framer-motion";
 import background from "../../statics/react.png";
 export const DashBoardContainer = styled.div`
   width: 100%;
